@@ -9,7 +9,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "numericBlock.ts"
+        "numericBlock.ts",
+        "_locales/ja/NumericBlock-strings.json"
     ],
     "testFiles": [
         "test.ts"

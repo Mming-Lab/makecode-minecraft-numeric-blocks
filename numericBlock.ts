@@ -1,38 +1,37 @@
+namespace agent {
+    //% group="Actions" weight=210 blockGap=30
+    //% blockId=minecraftinspectNumericBlockt 
+    //% block="agent numeric inspect %direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    //% blockGap=8
+    export function inspectNumericBlock(direction: number): number {
 
-/**
-* このファイルを使って、独自の関数やブロックを定義してください。
-* 詳しくはこちらを参照してください：https://minecraft.makecode.com/blocks/custom
-*/
+        const blockId: number = agent.inspect(AgentInspection.Block, direction);
+        switch (blockId) {
+            case BLACK_WOOL:
+                return 0;
+            case BROWN_WOOL:
+                return 1;
+            case RED_WOOL:
+                return 2;
+            case ORANGE_WOOL:
+                return 3;
+            case YELLOW_WOOL:
+                return 4;
+            case GREEN_WOOL:
+                return 5;
+            case BLUE_WOOL:
+                return 6;
+            case PURPLE_WOOL:
+                return 7;
+            case GRAY_WOOL:
+                return 8;
+            case WOOL:
+                return 9;
 
-enum MyEnum {
-    //% block="one"
-    One,
-    //% block="two"
-    Two
-}
+            default:
+                return null;
+        }
 
-/**
- * Custom blocks
- */
-//% weight=100 color=#0fbc11 icon=""
-namespace custom {
-    /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
-     */
-    //% block
-    export function foo(n: number, s: string, e: MyEnum): void {
-        // Add code here
-    }
-
-    /**
-     * TODO: describe your function here
-     * @param value describe value here, eg: 5
-     */
-    //% block
-    export function fib(value: number): number {
-        return value <= 1 ? value : fib(value -1) + fib(value - 2);
-    }
+    };
 }
