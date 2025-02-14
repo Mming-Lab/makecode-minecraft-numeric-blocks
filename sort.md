@@ -7,7 +7,8 @@
 # sort
 ## Sorting of numbers
 Return to the Minecraft screen and the numerical block will change at random.<br>
-Let's use the ``||agent:numeric inspect||`` to check the numerical value of the numerical block and arrange the blocks in numerical order.
+Let's use the ``||agent:numeric inspect||`` to check the numerical value of the numerical block and arrange the blocks in numerical order.<br>
+
 <!-- 
 # ソート
 ## 並び替え
