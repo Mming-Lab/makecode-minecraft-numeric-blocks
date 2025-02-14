@@ -11,7 +11,8 @@
         "README.md",
         "numericBlock.ts",
         "_locales/ja/NumericBlock-strings.json",
-        "_locales/ja/NumericBlock-jsdoc-strings.json"
+        "_locales/ja/NumericBlock-jsdoc-strings.json",
+        "sort.md"
     ],
     "testFiles": [
         "test.ts"
