@@ -1,10 +1,4 @@
-### @codeStart players set @s makecode 0
-### @codeStop players set @s makecode 1
 
-### @hideIteration true 
-### @explicitHints 1
-
- 
 # ソート
 ## 並び替え
 マインクラフトの画面に戻ると数値ブロックが無作為に変わります。<br>
