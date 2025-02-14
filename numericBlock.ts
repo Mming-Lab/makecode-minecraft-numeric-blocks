@@ -1,5 +1,9 @@
 namespace agent {
-    //% group="Actions" weight=210 blockGap=30
+    /**
+     * Inspects a numeric's block in the specified direction and returns the Value
+     * @param direction the direction in which to inspect
+     */
+    //% group="Actions" weight=130 blockGap=30
     //% blockId=minecraftinspectNumericBlockt 
     //% block="agent numeric inspect %direction"
     //% direction.shadow=minecraftAgentSixDirection
@@ -28,8 +32,8 @@ namespace agent {
                 return 8;
             case WOOL:
                 return 9;
-
             default:
+                player.warningMessage("Not Numeric Block. Value is null.");
                 return null;
         }
 

@@ -1,0 +1,4 @@
+{
+    "agent.inspectNumericBlock": "指定した方向に存在する数値ブロックを調査し、数値を返します。",
+    "agent.inspectNumericBlock|param|direction": "調査する方向。たとえば：SixDirection.Forward"
+}
