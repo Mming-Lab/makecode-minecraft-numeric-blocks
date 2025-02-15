@@ -1,3 +1,6 @@
+### @explicitHints true
+### @hideIteration true 
+### @flyoutOnly 0
 
 # ソート
 ## 並び替え
