@@ -10,6 +10,6 @@
 ```
 
 ```package
-rubyblock=github:mming-lab/numericblock
+numericblock=github:mming-lab/numericblock#master
 ```
 

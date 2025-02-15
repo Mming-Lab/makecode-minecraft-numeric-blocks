@@ -14,6 +14,6 @@ Let's use the ``||agent:numeric inspect||`` to check the numerical value of the 
 ```
 
 ```package
-rubyblock=github:mming-lab/numericblock
+numericblock=github:mming-lab/numericblock#master
 ```
 
