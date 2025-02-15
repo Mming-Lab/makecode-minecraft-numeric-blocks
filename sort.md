@@ -13,7 +13,7 @@ Let's use the ``||agent:numeric inspect||`` to check the numerical value of the 
 {}
 ```
 
-```package
+<!-- ```package
 numericblock=github:mming-lab/numericblock#master
-```
+``` -->
 
