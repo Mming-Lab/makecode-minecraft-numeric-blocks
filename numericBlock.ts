@@ -1,4 +1,5 @@
-namespace agent {
+//% color="#8c800b"
+namespace Input {
     /**
      * Inspects a numeric's block in the specified direction and returns the Value
      * @param direction the direction in which to inspect
