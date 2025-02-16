@@ -7,7 +7,7 @@ namespace agent {
     //% blockId=minecraftinspectNumericBlockt 
     //% block="agent numeric inspect %direction"
     //% direction.shadow=minecraftAgentSixDirection
-
+    //% weight=9999
     export function inspectNumericBlock(direction: number): number {
 
         const blockId: number = agent.inspect(AgentInspection.Block, direction);
