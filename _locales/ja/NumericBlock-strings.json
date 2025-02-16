@@ -1,3 +1,4 @@
 {
-        "agent.inspectNumericBlock|block": "エージェントの%directionの数値ブロックを調査"
+        "agent.inspectNumericBlock|block": "エージェントの%directionの数値ブロックを調査",
+        "{id:group}Numeric Block": "数値ブロック"
 }

@@ -3,11 +3,11 @@ namespace agent {
      * Inspects a numeric's block in the specified direction and returns the Value
      * @param direction the direction in which to inspect
      */
-    //% group="Actions" weight=130 blockGap=30
+    //% group="Numeric Block"
     //% blockId=minecraftinspectNumericBlockt 
     //% block="agent numeric inspect %direction"
     //% direction.shadow=minecraftAgentSixDirection
-    //% blockGap=8
+
     export function inspectNumericBlock(direction: number): number {
 
         const blockId: number = agent.inspect(AgentInspection.Block, direction);

@@ -11,8 +11,3 @@
 ```template
 {}
 ```
-
-<!-- ```package
-numericblock=github:mming-lab/numericblock#master
-```
- -->

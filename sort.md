@@ -1,8 +1,6 @@
-### @codeStart players set @s makecode 0
-### @codeStop players set @s makecode 1
-
+### @explicitHints true
 ### @hideIteration true 
-### @explicitHints 1
+### @flyoutOnly 0
 
 # sort
 ## Sorting of numbers
@@ -12,8 +10,3 @@ Let's use the ``||agent:numeric inspect||`` to check the numerical value of the 
 ```template
 {}
 ```
-
-<!-- ```package
-numericblock=github:mming-lab/numericblock#master
-``` -->
-
