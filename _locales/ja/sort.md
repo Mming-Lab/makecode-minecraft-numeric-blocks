@@ -48,6 +48,8 @@ player.onChat("sort", function () {
         変更 = 0
     }
     player.say("END")
+    for (let index = 0; index < 4; index++) {
+    }
 })
 
 ```
