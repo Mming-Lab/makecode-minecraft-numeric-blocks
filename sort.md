@@ -11,6 +11,7 @@ Let's use the ``||agent:numeric inspect||`` to check the numerical value of the 
 
 ```template
 player.onChat("sort", function () {
+    agent.teleport(world(1, 0, 2), WEST)
     player.say(agent.inspectNumericBlock(FORWARD))
 })
 ```

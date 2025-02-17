@@ -11,6 +11,7 @@
 
 ```template
 player.onChat("sort", function () {
+    agent.teleport(world(1, 0, 2), WEST)
     player.say(agent.inspectNumericBlock(FORWARD))
 })
 ```
