@@ -1,24 +1,54 @@
 
-> このページを開く [https://mming-lab.github.io/numericblock/](https://mming-lab.github.io/numericblock/)
+# Numeric Block
 
-## 拡張機能として使用
+[English](README.md) | [日本語](README_ja.md)
 
-このリポジトリは、MakeCode で **拡張機能** として追加できます。
+A MakeCode extension for Minecraft that provides numeric block functionality. This extension allows agents to inspect blocks and return numeric values (0-9) based on different colored wool blocks.
 
-* [https://minecraft.makecode.com/](https://minecraft.makecode.com/) を開く
-* **新しいプロジェクト** をクリックしてください
-* ギアボタンメニューの中にある **拡張機能** をクリックしてください
-* **https://github.com/mming-lab/numericblock** を検索してインポートします。
+> Open this page at [https://mming-lab.github.io/numericblock/](https://mming-lab.github.io/numericblock/)
 
-## このプロジェクトを編集します
+## Features
 
-MakeCode でこのリポジトリを編集します。
+- **Numeric Block Inspection**: Agents can inspect blocks in specified directions and get numeric values
+- **Wool Block Mapping**: Different colored wool blocks represent numbers 0-9
+  - Based on resistor color codes for easy memorization
+  - Black Wool = 0
+  - Brown Wool = 1
+  - Red Wool = 2
+  - Orange Wool = 3
+  - Yellow Wool = 4
+  - Green Wool = 5
+  - Blue Wool = 6
+  - Purple Wool = 7
+  - Gray Wool = 8
+  - White Wool = 9
 
-* [https://minecraft.makecode.com/](https://minecraft.makecode.com/) を開く
-* **読み込む** をクリックし、 **URLから読み込む...** をクリックしてください
-* **https://github.com/mming-lab/numericblock** を貼り付けてインポートをクリックしてください
+## Use as Extension
 
-#### メタデータ (検索、レンダリングに使用)
+This repository can be added as an **extension** in MakeCode.
+
+* Open [https://minecraft.makecode.com/](https://minecraft.makecode.com/)
+* Click on **New Project**
+* Click on **Extensions** under the gear button menu
+* Search for **https://github.com/mming-lab/numericblock** and import
+
+## Edit this project
+
+To edit this repository in MakeCode:
+
+* Open [https://minecraft.makecode.com/](https://minecraft.makecode.com/)
+* Click on **Import** then click on **Import URL**
+* Paste **https://github.com/mming-lab/numericblock** and click import
+
+## Usage
+
+Use the `agent numeric inspect` block to inspect blocks in any direction and get their numeric values.
+
+## License
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+#### Metadata (used for search, rendering)
 
 * for PXT/minecraft
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
