@@ -39,3 +39,32 @@ namespace agent {
 
     };
 }
+namespace blocks {
+    /**
+    * Arrange numeric blocks
+    * @param Start
+    * @param Direction
+    * @param Length
+    */
+    //% group="Numeric Block"
+    //% blockId=minecraftnumline
+    //% block="Arrange numeric blocks| Start:%pos=minecraftCreateWorldPosition| Direction:%direction| Length:%length"
+    //% direction.defl=2
+    //% length.defl=6
+    //% length.min=2 length.max=10
+    //% length.defl=6
+    //% weight=9999
+    export function numline(pos: Position, direction: CardinalDirection, length: number) {
+
+        //0:下Down(y-), 1:上Up(y+), 2:北North(z-), 3:南South(z+), 4:西West(x-), 5:東Eastx+)
+        const cmdCirection: number =
+            direction === CardinalDirection.Down ? 0
+                : direction === CardinalDirection.Up ? 1
+                    : direction === CardinalDirection.North ? 2
+                        : direction === CardinalDirection.South ? 3
+                            : direction === CardinalDirection.West ? 4
+                                : 5;
+                                
+        player.execute("scriptevent mming:numline " + pos + " " + cmdCirection + " " + length)
+    }
+}

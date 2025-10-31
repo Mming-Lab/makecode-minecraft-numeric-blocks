@@ -1,4 +1,5 @@
 {
         "agent.inspectNumericBlock|block": "エージェントの%directionの数値ブロックを調査",
+        "blocks.numline|block": "数値ブロックを並べる| 開始座標:%pos=minecraftCreateWorldPosition| 方向:%direction| 長さ:%length",
         "{id:group}Numeric Block": "数値ブロック"
 }

@@ -1,4 +1,8 @@
 {
     "agent.inspectNumericBlock": "指定した方向に存在する数値ブロックを調査し、数値を返します。",
-    "agent.inspectNumericBlock|param|direction": "調査する方向。たとえば：SixDirection.Forward"
+    "agent.inspectNumericBlock|param|direction": "調査する方向。たとえば：SixDirection.Forward",
+    "blocks.numline": "数値ブロックを並べる",
+    "blocks.numline|param|pos": "数値ブロックを配置し始めるワールド内の位置。",
+    "blocks.numline|param|direction": "数値ブロックを配置する方向。",
+    "blocks.numline|param|length": "配置する数値ブロックの数。"
 }
