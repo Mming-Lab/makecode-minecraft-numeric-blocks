@@ -1,52 +1,80 @@
 
-# Numeric Block
+# 数値ブロック (Numeric Block)
 
-[English](README.md) | [日本語](README_ja.md)
-
-A MakeCode extension for Minecraft that provides numeric block functionality. This extension allows agents to inspect blocks and return numeric values (0-9) based on different colored wool blocks.
+Minecraft用のMakeCode拡張機能で、数値ブロック機能を提供します。この拡張機能により、エージェントがブロックを検査して、異なる色の羊毛ブロックに基づいて数値（0-9）を取得できます。
 
 > Open this page at [https://mming-lab.github.io/numericblock/](https://mming-lab.github.io/numericblock/)
 
-## Features
+## 機能
 
-- **Numeric Block Inspection**: Agents can inspect blocks in specified directions and get numeric values
-- **Wool Block Mapping**: Different colored wool blocks represent numbers 0-9
-  - Based on resistor color codes for easy memorization
-  - Black Wool = 0
-  - Brown Wool = 1
-  - Red Wool = 2
-  - Orange Wool = 3
-  - Yellow Wool = 4
-  - Green Wool = 5
-  - Blue Wool = 6
-  - Purple Wool = 7
-  - Gray Wool = 8
-  - White Wool = 9
+- **数値ブロック検査**: エージェントが指定した方向のブロックを検査して数値を取得
+- **数値ブロック配置**: ワールド内にランダムな数値ブロックを一列に配置（Bedrock Editionアドオンと連携）
+- **羊毛ブロックマッピング**: 異なる色の羊毛ブロックが数字0-9を表現
+  - 覚えやすいように抵抗のカラーコードに基づいています
+  - 黒の羊毛 = 0
+  - 茶色の羊毛 = 1
+  - 赤の羊毛 = 2
+  - オレンジの羊毛 = 3
+  - 黄色の羊毛 = 4
+  - 緑の羊毛 = 5
+  - 青の羊毛 = 6
+  - 紫の羊毛 = 7
+  - 灰色の羊毛 = 8
+  - 白の羊毛 = 9
 
-## Use as Extension
+## 拡張機能として使用
 
-This repository can be added as an **extension** in MakeCode.
+このリポジトリはMakeCodeの**拡張機能**として追加できます。
 
-* Open [https://minecraft.makecode.com/](https://minecraft.makecode.com/)
-* Click on **New Project**
-* Click on **Extensions** under the gear button menu
-* Search for **https://github.com/mming-lab/numericblock** and import
+* [https://minecraft.makecode.com/](https://minecraft.makecode.com/) を開く
+* **新しいプロジェクト**をクリック
+* 歯車ボタンメニューの**拡張機能**をクリック
+* **https://github.com/mming-lab/numericblock** を検索してインポート
 
-## Edit this project
+## このプロジェクトを編集
 
-To edit this repository in MakeCode:
+このリポジトリをMakeCodeで編集するには:
 
-* Open [https://minecraft.makecode.com/](https://minecraft.makecode.com/)
-* Click on **Import** then click on **Import URL**
-* Paste **https://github.com/mming-lab/numericblock** and click import
+* [https://minecraft.makecode.com/](https://minecraft.makecode.com/) を開く
+* **インポート**をクリックし、次に**URLをインポート**をクリック
+* **https://github.com/mming-lab/numericblock** を貼り付けてインポート
 
-## Usage
+## 使用方法
 
-Use the `agent numeric inspect` block to inspect blocks in any direction and get their numeric values.
+### 基本ブロック
 
-## License
+1. **数値ブロックを調査**: `エージェントの〇〇の数値ブロックを調査` ブロックを使用して、任意の方向のブロックを検査し、その数値（0-9、または数値ブロックでない場合はnull）を取得できます。
 
-MIT License - see [LICENSE](LICENSE) file for details.
+2. **数値ブロックを並べる**: `数値ブロックを並べる` ブロックを使用して、ランダムにシャッフルされた数値ブロックを一列に配置できます。この機能を使用するには [Bedrock Editionアドオン](../minecraft-numeric-blocks-mcaddon/) のインストールが必要です。
+
+### サンプル: ソートアルゴリズム
+
+数値ブロックを使ったソートアルゴリズムを作成するためのスターターテンプレートです:
+
+```typescript
+function 初期化 (開始座標: Position) {
+    blocks.numline(開始座標, NORTH_CARDINAL_DIRECTION, 6)
+    agent.teleport(positions.add(
+    開始座標,
+    world(-1, 0, 0)
+    ), EAST)
+}
+player.onChat("sort", function () {
+    初期化(world(0, -60, 0))
+    // ここにソートアルゴリズムを記述しよう
+    player.say(agent.inspectNumericBlock(FORWARD))
+})
+```
+
+**このコードの動作:**
+1. 6個のランダムな数値ブロックを北向きに一列に配置する関数を作成
+2. エージェントを最初のブロックの西側に配置し、東を向かせる
+3. チャットで "sort" と入力すると、ブロックが初期化される
+4. `agent.inspectNumericBlock()` で値を読み取り、エージェントの移動/建築コマンドで並び替える独自のソートアルゴリズムを実装できます
+
+## ライセンス
+
+MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照してください。
 
 #### Metadata (used for search, rendering)
 
