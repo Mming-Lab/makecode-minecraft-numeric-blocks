@@ -12,15 +12,13 @@
         "README.md",
         "numericBlock.ts",
         "_locales/ja/NumericBlock-strings.json",
-        "_locales/ja/NumericBlock-jsdoc-strings.json",
-        "sort.md",
-        "_locales/ja/sort.md"
+        "_locales/ja/NumericBlock-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "2.1.24",
+        "target": "2.1.25",
         "targetId": "minecraft"
     },
     "supportedTargets": [
