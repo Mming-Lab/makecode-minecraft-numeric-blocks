@@ -44,17 +44,20 @@
 ![ソートテンプレート](images/sort-starter-template.png)
 
 ```typescript
-function 初期化(開始座標: Position) {
-  // ランダムな数値ブロックを6個、北向きに一列配置
-  blocks.numline(開始座標, NORTH_CARDINAL_DIRECTION, 6);
-  // エージェントを配置
-  agent.teleport(positions.add(開始座標, world(-1, 0, 0)), EAST);
+function 初期化 (開始座標: Position) {
+    // 破壊したブロックを1個だけ保持したいのでサバイバルモード
+    gameplay.setDifficulty(PEACEFUL)
+    gameplay.setGameMode(SURVIVAL, mobs.target(ALL_PLAYERS))
+    // 数値ブロックを並べる
+    blocks.numline(開始座標, NORTH_CARDINAL_DIRECTION, 6)
+    // エージェントを開始位置にテレポート
+    agent.teleport(positions.add(開始座標,world(-1, 0, 0)), EAST)
 }
 player.onChat("sort", function () {
-  初期化(world(0, -60, 0));
-  // ソートアルゴリズムを記述
-  player.say(agent.inspectNumericBlock(FORWARD));
-});
+    初期化(world(0, -60, 0))
+    // ここにソートアルゴリズムをプログラムしよう
+    player.say(agent.inspectNumericBlock(FORWARD))
+})
 ```
 
 **`blocks.numline` ブロック:**
