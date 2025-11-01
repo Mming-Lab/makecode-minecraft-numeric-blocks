@@ -63,15 +63,21 @@ https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
 
 #### バブルソート
 
-![バブルソート](images/バブルソート.mp4)
-
 隣同士の要素を比較して、大小関係が逆なら交換を繰り返すアルゴリズムです。
+
+<video width="640" height="360" controls>
+  <source src="./images/バブルソート.mp4" type="video/mp4">
+  お使いのブラウザは動画タグに対応していません。
+</video>
 
 #### 選択ソート
 
-![選択ソート](images/選択ソート.mp4)
-
 未ソート部分から最小値を見つけてソート済み部分の末尾に追加するアルゴリズムです。
+
+<video width="640" height="360" controls>
+  <source src="./images/選択ソート.mp4" type="video/mp4">
+  お使いのブラウザは動画タグに対応していません。
+</video>
 
 ### テンプレートコード
 
