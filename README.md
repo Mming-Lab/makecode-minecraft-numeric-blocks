@@ -39,7 +39,7 @@
 
 ソートアルゴリズムを実装するためのスターターテンプレート：
 
-📥 [minecraft-NumericBlock.mk](./minecraft-NumericBlock.mk)
+📥 [minecraft-NumericBlock.mkcd](./minecraft-NumericBlock.mkcd)
 
 ![ソートテンプレート](images/sort-starter-template.png)
 
