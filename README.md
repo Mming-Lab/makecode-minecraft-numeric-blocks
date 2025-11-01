@@ -25,7 +25,7 @@ MakeCode for Minecraftのエディタ画面で、左下の**拡張機能**ボタ
 検索欄に以下のURLを入力して検索します：
 
 ```
-https://github.com/mming-lab/numericblock
+https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
 ```
 
 ![URL検索](images/url-search.png)
