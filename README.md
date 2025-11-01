@@ -50,8 +50,6 @@ https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
 
 ## ソートアルゴリズムの実装
 
-![ソート実行動画](images/sort-demo.mp4)
-
 スターターテンプレート：📥 [minecraft-NumericBlock.mk](./minecraft-NumericBlock.mk)
 
 ![ソートテンプレート](images/sort-starter-template.png)
@@ -60,6 +58,22 @@ https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
 
 1. **数値ブロック配置**で、ランダムな数値ブロックを一列に配置
 2. **数値ブロック検査**で、色から数値を読み取ってソート
+
+### 実装例
+
+#### バブルソート
+
+![バブルソート](images/バブルソート.mp4)
+
+隣同士の要素を比較して、大小関係が逆なら交換を繰り返すアルゴリズムです。
+
+#### 選択ソート
+
+![選択ソート](images/選択ソート.mp4)
+
+未ソート部分から最小値を見つけてソート済み部分の末尾に追加するアルゴリズムです。
+
+### テンプレートコード
 
 ```typescript
 function 初期化 (開始座標: Position) {
