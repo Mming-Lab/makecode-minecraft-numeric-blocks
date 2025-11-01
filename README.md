@@ -1,40 +1,19 @@
-# 数値ブロック (Numeric Block)
+# 数値ブロック検査
 
-エージェントが数値ブロック（色付き羊毛）を読み取ってソートアルゴリズムを実行できるMakeCode拡張機能です。
+エージェントが数値ブロックを検査すると数値を読み取る MakeCode 拡張機能です。
 
-> Open this page at [https://mming-lab.github.io/numericblock/](https://mming-lab.github.io/numericblock/)
+## 実装例
 
-## こんなことができます
+[![実装例動画を視聴](https://img.shields.io/badge/▶️_実装例動画を視聴-blue?style=for-the-badge)](https://mming-lab.github.io/makecode-minecraft-numeric-blocks/)
 
-![数値ブロック一覧](images/numeric-blocks.png)
+### バブルソート
 
-- エージェントが色から数値（0-9）を読み取る
-- ランダムな数値ブロックを配置する
-- ソートアルゴリズムを実装する
+隣同士の要素を比較して、大小関係が逆なら交換を繰り返すアルゴリズムです。
 
-## インストール方法
-
-### 1. 拡張機能ボタンを押下
-
-MakeCode for Minecraftのエディタ画面で、左下の**拡張機能**ボタンをクリックします。
-
-![拡張機能ボタン](images/extension-button.png)
-
-### 2. リポジトリURLを入力して検索
-
-検索欄に以下のURLを入力して検索します：
-
-```
-https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
-```
-
-![URL検索](images/url-search.png)
-
-### 3. 拡張機能を取り込み
-
-検索結果に表示された拡張機能を選択してインポートします。
-
-![拡張機能選択](images/import-extension.png)
+<video width="640" height="360" controls>
+  <source src="./images/バブルソート.mp4" type="video/mp4">
+  お使いのブラウザは動画タグに対応していません。
+</video>
 
 ## 使い方
 
@@ -44,63 +23,73 @@ https://github.com/Mming-Lab/makecode-minecraft-numeric-blocks
 
 ![数値ブロック検査](images/inspect-numeric-block.png)
 
-```
-エージェントの〇〇の数値ブロックを調査
-```
 
-## ソートアルゴリズムの実装
+### 数値ブロック
 
-スターターテンプレート：📥 [minecraft-NumericBlock.mk](./minecraft-NumericBlock.mk)
+数値ブロック（色付き羊毛）は、[minecraft-numeric-blocks-mcaddo アドオン](https://github.com/Mming-Lab/minecraft-numeric-blocks-mcaddo)で提供されています。
+
+![数値ブロック一覧](images/numeric-blocks.png)
+
+抵抗器のカラーコードに基づいた色分けで、数字 0-9 を表現します：
+
+- **0 ＝黒色** / **1 ＝茶色** / **2 ＝赤色** / **3 ＝橙色** / **4 ＝黄色**
+- **5 ＝緑色** / **6 ＝青色** / **7 ＝紫色** / **8 ＝灰色** / **9 ＝白色**
+
+## スターターテンプレート
+
+ソートアルゴリズムを実装するためのスターターテンプレート：
+
+📥 [minecraft-NumericBlock.mk](./minecraft-NumericBlock.mk)
 
 ![ソートテンプレート](images/sort-starter-template.png)
 
-このテンプレートで、以下の2つの機能を組み合わせてソートアルゴリズムを実装します：
-
-1. **数値ブロック配置**で、ランダムな数値ブロックを一列に配置
-2. **数値ブロック検査**で、色から数値を読み取ってソート
-
-### 実装例
-
-#### バブルソート
-
-隣同士の要素を比較して、大小関係が逆なら交換を繰り返すアルゴリズムです。
-
-<video width="640" height="360" controls>
-  <source src="./images/バブルソート.mp4" type="video/mp4">
-  お使いのブラウザは動画タグに対応していません。
-</video>
-
-#### 選択ソート
-
-未ソート部分から最小値を見つけてソート済み部分の末尾に追加するアルゴリズムです。
-
-<video width="640" height="360" controls>
-  <source src="./images/選択ソート.mp4" type="video/mp4">
-  お使いのブラウザは動画タグに対応していません。
-</video>
-
-### テンプレートコード
-
 ```typescript
-function 初期化 (開始座標: Position) {
-    blocks.numline(開始座標, NORTH_CARDINAL_DIRECTION, 6)
-    agent.teleport(positions.add(
-    開始座標,
-    world(-1, 0, 0)
-    ), EAST)
+function 初期化(開始座標: Position) {
+  // ランダムな数値ブロックを6個、北向きに一列配置
+  blocks.numline(開始座標, NORTH_CARDINAL_DIRECTION, 6);
+  // エージェントを配置
+  agent.teleport(positions.add(開始座標, world(-1, 0, 0)), EAST);
 }
 player.onChat("sort", function () {
-    初期化(world(0, -60, 0))
-    // ソートアルゴリズムを記述
-    player.say(agent.inspectNumericBlock(FORWARD))
-})
+  初期化(world(0, -60, 0));
+  // ソートアルゴリズムを記述
+  player.say(agent.inspectNumericBlock(FORWARD));
+});
 ```
 
-## ライセンス
+**`blocks.numline` ブロック:**
 
-MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照してください。
+![数値ブロック配置](images/place-numeric-blocks.png)
 
-#### Metadata (used for search, rendering)
+- 指定した座標から、指定した方向に、ランダムにシャッフルされた数値ブロックを配置します
+- 配置できるブロック数は 2～10 個です
 
-* for PXT/minecraft
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## インストール方法
+
+### 1. 数値ブロックアドオンのインストール
+
+まず、[minecraft-numeric-blocks-mcaddo アドオン](https://github.com/Mming-Lab/minecraft-numeric-blocks-mcaddo)をインストールしてください。
+
+### 2. MakeCode 拡張機能の追加
+
+#### 2-1. 拡張機能ボタンを押下
+
+MakeCode for Minecraft のエディタ画面で、左下の**拡張機能**ボタンをクリックします。
+
+![拡張機能ボタン](images/extension-button.png)
+
+#### 2-2. リポジトリ URL を入力して検索
+
+検索欄に以下の URL を入力して検索します：
+
+```
+https://github.com/mming-lab/makecode-minecraft-numeric-blocks
+```
+
+![URL検索](images/url-search.png)
+
+#### 2-3. 拡張機能を取り込み
+
+検索結果に表示された拡張機能を選択してインポートします。
+
+![拡張機能選択](images/import-extension.png)
