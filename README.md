@@ -26,7 +26,7 @@
 
 ### 数値ブロック
 
-数値ブロック（色付き羊毛）は、[minecraft-numeric-blocks-mcaddo アドオン](https://github.com/Mming-Lab/minecraft-numeric-blocks-mcaddo)で提供されています。
+数値ブロック（色付き羊毛）は、[minecraft-numeric-blocks-resourcepack リソースパック](https://github.com/Mming-Lab/minecraft-numeric-blocks-resourcepack)で提供されています。
 
 ![数値ブロック一覧](images/numeric-blocks.png)
 
@@ -69,9 +69,9 @@ player.onChat("sort", function () {
 
 ## インストール方法
 
-### 1. 数値ブロックアドオンのインストール
+### 1. 数値ブロックリソースパックのインストール
 
-まず、[minecraft-numeric-blocks-mcaddo アドオン](https://github.com/Mming-Lab/minecraft-numeric-blocks-mcaddo)をインストールしてください。
+まず、[minecraft-numeric-blocks-resourcepack リソースパック](https://github.com/Mming-Lab/minecraft-numeric-blocks-resourcepack)をインストールしてください。
 
 ### 2. MakeCode 拡張機能の追加
 

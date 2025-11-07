@@ -54,17 +54,42 @@ namespace blocks {
     //% length.min=2 length.max=10
     //% length.defl=6
     //% weight=9999
-    export function numline(pos: Position, direction: CardinalDirection, length: number) {
+    export function numline(startPos: Position, direction: CardinalDirection, length: number) {
 
         //0:下Down(y-), 1:上Up(y+), 2:北North(z-), 3:南South(z+), 4:西West(x-), 5:東Eastx+)
-        const cmdCirection: number =
-            direction === CardinalDirection.Down ? 0
-                : direction === CardinalDirection.Up ? 1
-                    : direction === CardinalDirection.North ? 2
-                        : direction === CardinalDirection.South ? 3
-                            : direction === CardinalDirection.West ? 4
-                                : 5;
-                                
-        player.execute("scriptevent mming:numline " + pos + " " + cmdCirection + " " + length)
+        const 方向ベクトル: Position =
+            direction === CardinalDirection.Down ? world(0, -1, 0)
+                : direction === CardinalDirection.Up ? world(0, 1, 0)
+                    : direction === CardinalDirection.North ? world(0, 0, -1)
+                        : direction === CardinalDirection.South ? world(0, 0, 1)
+                            : direction === CardinalDirection.West ? world(-1, 0, 0)
+                                : world(1, 0, 0);
+
+        const 数字ブロック配列: Block[] = [
+            BLACK_WOOL,     // NO0
+            BROWN_WOOL,     // NO1
+            RED_WOOL,       // NO2
+            ORANGE_WOOL,    // NO3
+            YELLOW_WOOL,    // NO4
+            GREEN_WOOL,     // NO5
+            BLUE_WOOL,      // NO6
+            PURPLE_WOOL,    // NO7
+            GRAY_WOOL,      // NO8
+            WOOL,           // NO9
+        ];
+
+        //数字ブロック配列をシャッフルして長さ分取得
+        for (let i = 数字ブロック配列.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [数字ブロック配列[i], 数字ブロック配列[j]] = [数字ブロック配列[j], 数字ブロック配列[i]];
+        }
+        const ランダム数字ブロック配列 = 数字ブロック配列.slice(0, length);
+
+        //ブロック設置ループ
+        for (let i = 0; i < ランダム数字ブロック配列.length; i++) {
+            const 移動: Position = world(方向ベクトル.getValue(Axis.X) * i, 方向ベクトル.getValue(Axis.Y) * i, 方向ベクトル.getValue(Axis.Z) * i);
+            const 配置座標: Position = positions.add(startPos, 移動);
+            blocks.place(ランダム数字ブロック配列[i], 配置座標)
+        }
     }
 }
