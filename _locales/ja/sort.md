@@ -1,13 +1,10 @@
-### @codeStart players set @s makecode 0
-### @codeStop players set @s makecode 1
+### @flyoutOnly true
+### @hideIteration true
+### @explicitHints true
 
-### @hideIteration true 
-### @flyoutOnly 1
-### @explicitHints 1
-
-# sort
-
-## JAエージェントに並び替えをさせよう
+# enこのアクティビティにコードは必要(ひつよう)ない。
+## Step 1
+このアクティビティにコードは必要(ひつよう)ない。
 
 ```template
 player.onChat("sort", function () {
