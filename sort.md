@@ -2,13 +2,16 @@
 ### @hideIteration true
 ### @explicitHints true
 
-# jaこのアクティビティにコードは必要(ひつよう)ない。
-## Step 1
-このアクティビティにコードは必要(ひつよう)ない。
+# enブロックを並べ変えよう
+
+## ステップ 1 
+英語``||agent:inspectNumericBlock||`` を使って数値ブロック調べて、エージェント順番に並べさせよう
+
+#### ~ tutorialhint 
+```
+player.say(agent.inspectNumericBlock(FORWARD))
+```
 
 ```template
-player.onChat("sort", function () {
-    // ここにソートアルゴリズムをプログラムしよう
-    player.say(agent.inspectNumericBlock(FORWARD))
-})
+{}
 ```
