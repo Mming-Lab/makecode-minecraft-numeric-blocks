@@ -12,11 +12,14 @@
   お使いのブラウザは動画タグに対応していません。
 </video>
 
-#### ~ tutorialhint 
-```
-player.say(agent.inspectNumericBlock(FORWARD))
-```
-
 ```template
 {}
 ```
+
+#### ~ tutorialhint 
+```template
+player.onChat("numeric", function () {
+    player.say(agent.inspectNumericBlock(FORWARD))
+})
+```
+
