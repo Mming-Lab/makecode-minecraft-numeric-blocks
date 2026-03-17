@@ -1,25 +1,13 @@
-### @flyoutOnly true
 ### @hideIteration true
-### @explicitHints true
 
-# jaブロックを並べ変えよう
+# ブロックを並べかえよう
 
-## ステップ 1 
-日本``||agent:inspectNumericBlock||`` を使って数値ブロック調べて、エージェント順番に並べさせよう
+## どんな順番でも並べかえられるコードを考えよう
 
-<video width="640" height="360" controls>
-  <source src="./images/バブルソート.mp4" type="video/mp4">
-  お使いのブラウザは動画タグに対応していません。
-</video>
+MakeCode画面からマインクラフトに戻るたびに、数値ブロックの並びが変わるよ<br>
+
+``||agent:数値ブロックを調べる||`` を使って、数値ブロックを順番に並べさせよう<br>
 
 ```template
 {}
 ```
-
-#### ~ tutorialhint 
-```template
-player.onChat("numeric", function () {
-    player.say(agent.inspectNumericBlock(FORWARD))
-})
-```
-
