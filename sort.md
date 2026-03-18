@@ -1,4 +1,7 @@
 ### @hideIteration true
+### @explicitHints true
+### @unifiedToolbox true 
+
 
 # Sort the Blocks
 
@@ -6,7 +9,8 @@
 
 Every time you switch back from MakeCode to Minecraft, the number blocks change their order<br>
 
-Use ``||agent:inspect numeric block||`` to sort the number blocks in order<br>
+Use ``||agent:numeric value of block||`` to sort the number blocks in order<br>
+
 ```template
 {}
 ```

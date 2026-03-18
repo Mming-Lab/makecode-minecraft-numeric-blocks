@@ -1,4 +1,6 @@
 ### @hideIteration true
+### @explicitHints true
+### @unifiedToolbox true 
 
 # ブロックを並べかえよう
 
@@ -6,7 +8,7 @@
 
 MakeCode画面からマインクラフトに戻るたびに、数値ブロックの並びが変わるよ<br>
 
-``||agent:数値ブロックを調べる||`` を使って、数値ブロックを順番に並べさせよう<br>
+``||agent:ブロックの数値|`` を使って、数値ブロックを順番に並べさせよう<br>
 
 ```template
 {}

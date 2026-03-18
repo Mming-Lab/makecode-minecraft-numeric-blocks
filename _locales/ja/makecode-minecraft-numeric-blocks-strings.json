@@ -1,5 +1,5 @@
 {
-    "agent.inspectNumericBlock|block": "%directionの数値ブロックを調べる",
+    "agent.inspectNumericBlock|block": "エージェントの%directionのブロックの数値",
     "blocks.numline|block": "数値ブロックを並べる| 開始座標:%pos=minecraftCreateWorldPosition| 方向:%direction| 長さ:%length",
     "{id:group}Numeric Block": "数値ブロック"
 }
